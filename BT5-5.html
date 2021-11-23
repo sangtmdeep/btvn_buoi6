@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+  <script src="5-5.js"></script>
+  <link rel="stylesheet" href="style5-5.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand">Navbar</a>
+    <!-- <form class="form-inline"> -->
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0"  onclick="callAPI()" type="submit">Search</button>
+    <!-- </form> -->
+  </nav>
+  <div class="row">
+    <div class="col-md-3 list-item">
+      <ul class="list-group" id="list-item">
+        <li class="list-group-item active">Product list</li>
+        <li class="list-group-item">Categories</li>
+        <li class="list-group-item">New</li>
+        <li class="list-group-item">Membership</li>
+        <li class="list-group-item">Ordered products</li>
+        <li class="list-group-item add-item" id='add'>
+          <div class="input-group">
+            <input type="text" id="input-add">
+            <button class="btn btn-outline-secondary" type="button" id="btnAdd" onclick="add()">add</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-9 main-page" id="mainpage">
+      <div class="row card-row">
+        <div class="col-md-4 item">
+          <div class="card" style="width: 21rem;" id="item-1">
+            <img class="card-img-top" src="https://higreen.in/wp-content/uploads/2017/08/stwaberry.jpg"
+              alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Strawberry</h5>
+              <p class="card-text">A brand new Apple product which provide various option for you to choose</p>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                  data-toggle="dropdown" aria-expanded="false">
+                  Dropdown button
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#" onclick="changeColor('black', 1)">Black</a>
+                  <a class="dropdown-item" href="#" onclick="changeColor('white', 1)">White</a>
+                  <a class="dropdown-item" href="#" onclick="changeColor('gold', 1)">Gold</a>
+                </div>
+              </div>
+              <a href="#" class="btn btn-primary">Order</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 item">
+          <div class="card" style="width: 21rem;">
+            <img class="card-img-top" src="https://www.mesunhatrang.com/wp-content/uploads/2020/04/cay-cam-vang-my-2.jpg"
+              alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Strawberry</h5>
+              <p class="card-text">A brand new Apple product which provide various option for you to choose</p>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                  data-toggle="dropdown" aria-expanded="false">
+                  Dropdown button
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+              <a href="#" class="btn btn-primary">Order</a>
+            </div>
+          </div>
+      </div>
+      <div class="col-md-4 item">
+        <div class="card" style="width: 21rem;">
+          <img class="card-img-top" src="https://higreen.in/wp-content/uploads/2017/08/stwaberry.jpg"
+            alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Strawberry</h5>
+            <p class="card-text">A brand new Apple product which provide various option for you to choose</p>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-expanded="false">
+                Dropdown button
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+            <a href="#" class="btn btn-primary">Order</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 item">
+        <div class="card" style="width: 21rem;">
+          <img class="card-img-top" src="https://higreen.in/wp-content/uploads/2017/08/stwaberry.jpg"
+            alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Strawberry</h5>
+            <p class="card-text">A brand new Apple product which provide various option for you to choose</p>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-expanded="false">
+                Dropdown button
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+            <a href="#" class="btn btn-primary">Order</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 item">
+        <div class="card" style="width: 21rem;">
+          <img class="card-img-top" src="https://higreen.in/wp-content/uploads/2017/08/stwaberry.jpg"
+            alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Strawberry</h5>
+            <p class="card-text">A brand new Apple product which provide various option for you to choose</p>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-expanded="false">
+                Dropdown button
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+            <a href="#" class="btn btn-primary">Order</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 item">
+        <div class="card" style="width: 21rem;">
+          <img class="card-img-top" src="https://higreen.in/wp-content/uploads/2017/08/stwaberry.jpg"
+            alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Strawberry</h5>
+            <p class="card-text">A brand new Apple product which provide various option for you to choose</p>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-expanded="false">
+                Dropdown button
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+            <a href="#" class="btn btn-primary">Order</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 item">
+        <div class="card" style="width: 21rem;">
+          <img class="card-img-top" src="https://higreen.in/wp-content/uploads/2017/08/stwaberry.jpg"
+            alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Strawberry</h5>
+            <p class="card-text">A brand new Apple product which provide various option for you to choose</p>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-expanded="false">
+                Dropdown button
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+            <a href="#" class="btn btn-primary">Order</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 item">
+        <div class="card" style="width: 21rem;">
+          <img class="card-img-top" src="https://higreen.in/wp-content/uploads/2017/08/stwaberry.jpg"
+            alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Strawberry</h5>
+            <p class="card-text">A brand new Apple product which provide various option for you to choose</p>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-expanded="false">
+                Dropdown button
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+            <a href="#" class="btn btn-primary">Order</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 item">
+        <div class="card" style="width: 21rem;">
+          <img class="card-img-top" src="https://higreen.in/wp-content/uploads/2017/08/stwaberry.jpg"
+            alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Strawberry</h5>
+            <p class="card-text">A brand new Apple product which provide various option for you to choose</p>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-expanded="false">
+                Dropdown button
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+            <a href="#" class="btn btn-primary">Order</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 item">
+        <div class="card" style="width: 21rem;">
+          <img class="card-img-top" src="https://higreen.in/wp-content/uploads/2017/08/stwaberry.jpg"
+            alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Strawberry</h5>
+            <p class="card-text">A brand new Apple product which provide various option for you to choose</p>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-expanded="false">
+                Dropdown button
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+            <a href="#" class="btn btn-primary">Order</a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="col-md-12 footer">
+
+  </div>
+</body>
+
+</html>

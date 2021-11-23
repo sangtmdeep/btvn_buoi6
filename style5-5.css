@@ -1,0 +1,25 @@
+.item{
+    padding: 10px;
+}
+
+.list-item{
+    background: #b1e9f7;
+}
+
+
+.footer{
+    background: #eee592;
+    height: 70px;
+}
+
+.black {
+    background-color: darkgray;
+}
+
+.white {
+    background-color: white;
+}
+
+.gold {
+    background-color: goldenrod;
+}
